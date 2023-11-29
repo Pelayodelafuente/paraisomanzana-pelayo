@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insertar Variedad</title>
+<link rel="shortcut icon" href="https://i.imgur.com/OhRWUP3.png">
+<link rel="stylesheet" type="text/css" href="../static/css/insertar.css" th:href="@{/css/insertar.css}" />
+</head>
+
+<style>
+	#formvar{
+		height: 50%;
+		justify-content: center;
+	}
+	
+</style>
+
+<body>
+
+<h2>Insertar Variedad</h2>
+
+	<form id="formvar" method="post" th:action="@{/variedades/insertar}" th:object="${variedad}">
+		<p>Nombre: <input type="text" th:field="*{nombre}" required>
+
+			<p><input type="submit" value="Insertar">
+			
+			<p><a th:href="@{/variedades/mostrarvariedades}">Volver</a>
+
+	</form>
+	
+
+</body>
+</html>

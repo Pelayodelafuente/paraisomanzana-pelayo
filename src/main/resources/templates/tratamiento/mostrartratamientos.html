@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Listado de Tratamientos</title>
+<link rel="shortcut icon" href="https://i.imgur.com/OhRWUP3.png">
+<link rel="stylesheet" type="text/css" href="../static/css/mostrar.css" th:href="@{/css/mostrar.css}" />
+</head>
+<body>
+
+<header>
+	<img src="https://i.imgur.com/gOc2RRw.png" alt="Logotipo Paraiso Manzana">
+	<a class="opcion" th:href="@{/fincas/mostrarfincas}">Fincas</a>
+	<a class="opcion" th:href="@{/variedades/mostrarvariedades}">Variedades</a>
+	<a class="opcion" th:href="@{/recolecciones/mostrarrecolecciones}">Recolecciones</a>
+	<a class="opcion" th:href="@{/tratamientos/mostrartratamientos}">Tratamientos</a>
+	</header>
+	<div class="titulo"><h1>Listado de Tratamientos</h1></div>
+	<div class="tabla"><table>
+		<tr>
+			<th>Denominacion</th>
+			<th>Dosis</th>
+			<th>Tipo</th>
+			<th>Arbol Fila</th>
+			<th>Arbol Columna</th>
+			<th>Ubicacion Arbol</th>
+		</tr>
+		<tr th:each="tratamiento: ${tratamientos}">
+			<td th:text="${tratamiento.denominacion}" />
+			<td th:text="${tratamiento.dosisrecomendada}" />
+			<td th:text="${tratamiento.tipo}" />
+			<td th:text="${tratamiento.arbol.fila}" />
+			<td th:text="${tratamiento.arbol.columna}" />
+			<td th:text="${tratamiento.arbol.ubicacion}" />
+			<td><a class="eliminar" th:href="@{/tratamientos/eliminar?(idtratamiento=${tratamiento.idtratamiento})}">Eliminar</a></td>
+			<td><a class="modificar" th:href="@{/tratamientos/formmodificar?(idtratamiento=${tratamiento.idtratamiento})}">Modificar</a></td>
+	</table></div>
+	
+<a class="insertar" th:href="@{/tratamientos/forminsertar}">Insertar tratamiento</a>
+<p><a th:href="@{/home}">Volver</a>
+
+</body>
+</html>

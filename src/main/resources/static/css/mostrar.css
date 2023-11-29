@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
+
+body{
+	font-family: 'Courgette';
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 0px;
+	padding: 0px;
+	background-color: #6E9E6F; 
+	font-size:20px;
+		
+}
+
+
+header{
+	display: flex;
+	flex-direction: row;
+	border-bottom: 4px inset black;
+	width: 100%;
+	background-color: #A7864A;
+	height: 90px;
+}
+
+
+.titulo{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100px;
+}
+
+
+.opcion{
+	margin-top: 0px;
+	color: black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 25%;
+	height: 100%;
+	font-size: 25px;
+	transition: all 0.4s;
+	user-select: none;
+	text-decoration: none;
+	border-right: 3px inset black;
+}
+	
+	
+.opcion:hover{
+	background-color: #644100;
+	font-size: 40px;
+}
+	
+	
+.tabla{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%	
+}
+	
+	
+table{
+	width: 85%;
+	background-color: #A7864A;
+	border: 10px ridge black;
+	padding: 5px;
+	border-radius: 20px;
+	box-shadow: 0px 0px 23px 1px rgba(0,0,0,0.75);
+}
+	
+	
+tr{
+	text-align: center;
+}
+
+
+a{
+	margin-top: 40px;
+	color: #FFC860;
+}
+
+
+header img{
+	width: 140px;
+	height: 87px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+
+.eliminar{
+	color: #D63535;
+}
+
+
+.modificar{
+	color: #3543D6;
+}
+
+
+.insertar{
+	color: #24492E;
+	
+}
+
+
+p{
+	margin-top: 40px;	
+}
+
+
+img{
+	width:70%;
+}
+

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>error</title>
+<link rel="shortcut icon" href="https://i.imgur.com/OhRWUP3.png">
+</head>
+
+<style>
+	
+	@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+	
+	
+body {
+  font-family: 'Courgette';
+  margin: 0;
+  padding: 0;
+  height:100vh;
+  width:100vw;
+  background-color: #6E9E6F;
+  display: flex;
+  justify-content:center;
+  flex-direction:column;
+}
+
+
+a {
+  margin-top:15px;
+  font-size:20px;
+  color: inherit;
+  width: 100%;
+  text-align:center;
+}
+
+
+h1 {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  transition: color 0.3s;
+}
+
+
+.aviso{
+	border: 10px ridge #644100;
+	border-radius: 10px;
+	background-color: #FFC860;
+	width: 50%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+header{
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 20px;
+	margin-top: -20px;
+}
+
+
+header img{
+	width: 50%;
+}
+</style>
+<body>
+	
+	<h1>Se ha producido un error</h1>
+<a th:href="@{/home}">Volver al inicio</a>
+
+</body>
+</html>

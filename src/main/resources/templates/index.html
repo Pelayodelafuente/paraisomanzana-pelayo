@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<link rel="shortcut icon" href="https://i.imgur.com/OhRWUP3.png">
+<title>Paraíso Manzana</title>
+
+<style>
+	
+	@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+	
+	
+header {
+  background-color: #6E9E6F;
+  height: 110px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+  margin: 0;
+}
+
+
+header p {
+  font-size: 25px;
+  font-weight: bold;
+  margin-right: 40px;
+}
+
+
+header img {
+  height: 100px;
+}
+
+
+body {
+	background-image: url(https://i.imgur.com/K0FhZHa.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin:0;
+	padding: 0;
+	height: 100vh;
+	width: 100vw;
+}
+
+
+.contenedor {
+  height: 75%;
+  width: 100%;
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: -20px;
+}
+
+
+.apartado{
+  background-color: #6E9E6F;
+  display: flex;
+  width: 400px;
+  height: 400px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 10%;
+  border: 10px ridge black;
+  transition: 0.3s;
+  box-shadow: 0px 0px 17px 4px rgba(0,0,0,0.75);
+}
+
+
+.apartado a{
+  text-decoration: none;
+  font-size: 20px;
+  font-family: 'Courgette';
+  color: black;
+  cursor: pointer;
+}
+
+
+.apartado:hover h1{
+	color: #FFC860;
+	cursor: pointer;
+}
+
+
+.apartado p{
+	color: black;
+	font-family: 'Courgette';
+	font-size: 22px;
+	padding: 10px;
+}
+
+
+.apartado:hover{
+	transform: scale(1.1);
+}
+
+
+.salir{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+
+.salir p {
+	border: 10px inset #644100;
+	background-color: #FFC860;
+	padding: 5px;
+	border-radius: 10px;
+}
+
+
+.salir p a{
+	color: black;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+
+.salir p:hover{
+	background-color: #644100;
+	transition: 0.2s;
+}
+
+
+</style>
+</head>
+
+
+<body>
+	
+	<header>
+		<img src="https://i.imgur.com/gOc2RRw.png" alt="Logotipo Paraiso Manzana">
+	</header>
+	
+	<div class="contenedor">
+		
+		
+		<div class="apartado">
+			<a th:href="@{/fincas/mostrarfincas}">
+				<h1>LISTADO DE FINCAS</h1>
+			</a>
+			
+			<p>Registro de todas las fincas en activo, con autorización de visualización para todos los usuarios. Restringidas las opciones de crear, modificar y eliminar.
+			</p>
+		</div>
+		
+		
+		<div class="apartado">
+			<a th:href="@{/tratamientos/mostrartratamientos}">
+				<h1>TRATAMIENTOS</h1>
+			</a>
+			
+			<p>Vista general y listado de todos los tratamientos que están siendo usados. Todos los usuarios pueden verlos, pero solo administradores pueden crear, modificar o eliminar.
+			</p>
+		</div>
+		
+		
+		<div class="apartado">
+			<a th:href="@{/recolecciones/mostrarrecolecciones}">
+				<h1>RECOLECCIONES</h1>
+			</a>
+			
+			<p>Vista general y listado de todas las recolecciones realizadas. Todos los usuarios tienen acceso, pero solo administradores pueden crear, modificar o eliminar.
+				
+			</p>
+			
+		</div>
+		
+		
+		
+	</div>
+	
+	<div class="salir">
+		<p><a class="salir" th:href="@{/salir}">Cerrar sesión</a>
+		</div>
+
+</body>
+</html>

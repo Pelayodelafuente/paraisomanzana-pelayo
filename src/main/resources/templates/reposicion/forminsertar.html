@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insertar Reposición</title>
+<link rel="shortcut icon" href="https://i.imgur.com/OhRWUP3.png">
+<link rel="stylesheet" type="text/css" href="../static/css/insertar.css" th:href="@{/css/insertar.css}" />
+</head>
+
+<style>
+	form{
+		height: 60%;
+		width: 40%;
+	}
+</style>
+<body>
+	
+<h2>Insertar Reposición</h2>
+	
+<form method="post" th:action="@{/reposiciones/insertar}" th:object="${reposicion}">
+			
+	<p>Comentario: <textarea rows="3" cols="30" th:field="*{comentario}"></textarea><br><br>
+		
+	<p>Fecha Reposicion: <input type="date" th:field="*{fechareposicion}" required>
+		
+	<p>Arbol: <select th:field="*{arbol}" required>
+	<option th:each="arbol: ${arboles}" th:value="${arbol.idarbol}" th:text="${arbol.ubicacion}"></option>
+	</select>
+	<p><input type="submit" value="Insertar">
+	<p><a th:href="@{/arboles/reposicionesarbol?(idarbol=${reposicion.arbol.idarbol})}">Volver</a></p>
+</form>
+	
+
+</body>
+</html>

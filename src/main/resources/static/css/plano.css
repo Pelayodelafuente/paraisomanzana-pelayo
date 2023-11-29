@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
+html{
+	background-image: url("https://i.imgur.com/wS04k05.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+
+
+body{
+	font-family: 'Courgette';
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex-shrink: initial;
+	flex-wrap: wrap;
+	margin: 0px;
+	padding: 0px;
+	background-color: #6E9E6F;
+	background-image: url("https://i.imgur.com/wS04k05.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+
+
+header{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	background-color: #A7864A;
+	border-bottom: 4px inset black;
+	margin-bottom: 5px;
+	height: 90px;
+}
+
+
+
+header img{
+	width: 140px;
+	height: 87px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+
+
+.titulo{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 20%;
+	height: 100px;
+	margin-bottom: -15px;
+}
+	
+	
+	
+.opcion{
+	margin-top: 0px;
+	color: black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 25%;
+	height: 100%;
+	font-size: 25px;
+	transition: all 0.4s;
+	user-select: none;
+	text-decoration: none;
+	border-right: 3px inset black;
+	}
+	
+	
+	
+.opcion:hover{
+	background-color: #644100;
+	font-size: 40px;
+}
+	
+		
+	
+a{
+	margin-top: 40px;
+	font-size: 20px;
+	color: black;
+}
+	
+	
+	
+p{
+	margin-top: 20px;
+}
+	
+	
+	
+.arbol{
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	text-align:center;
+	width:40px;
+	height:40px;
+	background-color:rgb(170, 118, 9);
+	margin: 5px;
+	border: solid 3px black;
+	border-radius: 30px;
+}
+	
+	
+	
+.cuadricula{
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	text-align:center;
+	width:40px;
+	height:40px;
+	background-color:#CACFD2;
+	margin: 5px;
+	border: inset 3px black;
+	border-radius: 30px;
+	user-select: none;
+}
+
+.contenedor{
+	background-color: #A7864A;
+	border: solid 15px black;
+	border-radius: 30px;
+}
+
+h1{
+	background-color: #A7864A;
+	font-size: 25px;
+	border: 3px solid black;
+	color: black;
+	padding: 10px;
+	border-radius: 15px;
+}
+
+div.cuadricula:hover{
+	background-color: #644100;
+	transition: 0.3s;
+}
+

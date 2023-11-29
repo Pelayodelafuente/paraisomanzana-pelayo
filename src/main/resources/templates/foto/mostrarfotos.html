@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Listado de Fotos</title>
+<link rel="shortcut icon" href="https://i.imgur.com/OhRWUP3.png">
+<link rel="stylesheet" type="text/css" href="../static/css/mostrar.css" th:href="@{/css/mostrar.css}" />
+</head>
+
+<style>
+	#separar{
+		padding: 10px;
+	}
+	
+	img{
+		width: 300px;
+		height: 200px;
+	}
+</style>
+<body>
+	
+<header>
+	<img src="https://i.imgur.com/gOc2RRw.png" alt="Logotipo Paraiso Manzana">
+	<a class="opcion" th:href="@{/fincas/mostrarfincas}">Fincas</a>
+	<a class="opcion" th:href="@{/variedades/mostrarvariedades}">Variedades</a>
+	<a class="opcion" th:href="@{/recolecciones/mostrarrecolecciones}">Recolecciones</a>
+	<a class="opcion" th:href="@{/tratamientos/mostrartratamientos}">Tratamientos</a>
+</header>
+
+	<div class="titulo">
+		<h1>Listado de Fotos</h1>
+	</div>
+	
+	<div class="tabla">
+		<table>
+		<tr>
+			<th>Foto</th>
+			<th>Url</th>
+			<th>Alias</th>
+			<th>Fila</th>
+			<th>Columna</th>
+			<th>Ubicacion</th>
+		</tr>
+		
+		<tr th:each="foto: ${fotos}">
+			<td><img alt="" th:src="${foto.url}"></td>
+			<td th:text="${foto.url}" />
+			<td th:text="${foto.alias}" />
+			<td th:text="${foto.arbol.fila}" />
+			<td th:text="${foto.arbol.columna}" />
+			<td th:text="${foto.arbol.ubicacion}" />
+			<td><a id="separar" class="eliminar" th:href="@{/fotos/eliminar?(idfoto=${foto.idfoto},idarbol=${arbol.idarbol})}">Eliminar</a></td>
+			<td><a id="separar" class="modificar" th:href="@{/fotos/formmodificar?(idfoto=${foto.idfoto})}">Modificar</a></td>
+	</table></div>
+	
+<a class="insertar" th:href="@{/fotos/forminsertar?(idarbol=${arbol.idarbol})}">Insertar foto</a>
+<p><a th:href="@{/fincas/arbolesfinca?(idfinca=${arbol.finca.idfinca})}">Volver</a>
+
+
+</body>
+</html>

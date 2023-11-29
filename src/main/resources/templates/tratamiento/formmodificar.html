@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Modificar tratamiento</title>
+<link rel="shortcut icon" href="https://i.imgur.com/OhRWUP3.png">
+<link rel="stylesheet" type="text/css" href="../static/css/insertar.css" th:href="@{/css/insertar.css}" />
+</head>
+
+<style>
+	form{
+		height: 75%;
+	}
+</style>
+<body>
+	
+<h2>Modificar Tratamiento</h2>
+
+	<form method="post" th:action="@{/tratamientos/insertar}" th:object="${tratamiento}">
+		
+		<input type="hidden" name="idtratamiento" th:value="${tratamiento.idtratamiento}">
+		
+		<p>Denominacion: <input type="text" th:field="*{denominacion}" th:value="tratamiento.denominacion" required>
+		
+		<p>Dosis: <input type="number" th:field="*{dosisrecomendada}" th:value="tratamiento.dosisrecomendada" required>
+		
+		<p>Tipo: <input type="text" th:field="*{tipo}" th:value="tratamiento.tipo" required>
+		
+		<p>Arbol: <select th:field="*{arbol}">
+		<option th:each="arbol: ${arboles}" th:value="${arbol.idarbol}" th:text="${arbol.ubicacion}"></optio>
+		</select>
+		
+		<p><input type="submit" value="Modificar" ></p>
+		<p><a th:href="@{/tratamientos/mostrartratamientos}">Volver</a> 
+
+	</form>
+
+</body>
+</html>

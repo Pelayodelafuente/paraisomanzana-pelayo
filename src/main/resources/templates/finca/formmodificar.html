@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Modificar Finca</title>
+<link rel="shortcut icon" href="https://i.imgur.com/OhRWUP3.png">
+<link rel="stylesheet" type="text/css" href="../static/css/insertar.css" th:href="@{/css/insertar.css}" />
+</head>
+
+<body>
+	
+<h2>Modificar Finca</h2>
+
+<form method="post" th:action="@{/fincas/insertar}" th:object="${finca}" required>
+	<input type="hidden" name="idfinca" th:value="${finca.idfinca}" required>
+	<p>Denominacion: <input type="text" th:field="*{denominacion}" th:value="finca.denominacion" required>
+	<p>Direccion: <input type="text" th:field="*{direccion}" th:value="finca.direccion" required>
+	<p>Referencia : <input type="text" th:field="*{referenciacatastral}" th:value="finca.referenciacatastral" required>
+	<p>Superficie: <input type="text" th:field="*{superficie}" th:value="finca.superficie" required>
+	<p>Localización: <input type="text" th:field="*{localizacion}" th:value="finca.localizacion" required>
+	<p>
+	<input class="modificarfinca" type="submit" value="Modificar" >
+	<p><a th:href="@{/fincas/mostrarfincas}">Volver</a> 
+
+</form>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insertar Árbol</title>
+<link rel="shortcut icon" href="https://i.imgur.com/OhRWUP3.png">
+<link rel="stylesheet" type="text/css" href="../static/css/insertar.css" th:href="@{/css/insertar.css}" />
+</head>
+
+<style>
+	h2{
+		margin-top: 20px;
+		margin-bottom: -2px;
+	}
+	form{
+		height: 90%;
+	}
+</style>
+
+<body>
+	
+	<h2>Insertar Arbol</h2>
+	
+	<form method="post" th:action="@{/arboles/insertar}" th:object="${arbol}">
+		<p>Fila: <input type="number" th:field="*{fila}" required>
+		
+		<p>Columna: <input type="number" th:field="*{columna}" required> 
+		
+		<p>Ubicación: <input type="text" th:field="*{ubicacion}" required>
+		
+		<p>Finca:
+		<select th:field="*{finca}" required>
+			<option th:each="finca: ${fincas}" th:value="${finca.idfinca}" th:text="${finca.denominacion}"></option>
+		</select>
+		
+		<p>Variedad: 
+		<select th:field="*{variedad}" required> 
+			<option th:each="variedad: ${variedades}" th:value="${variedad.idvariedad}" th:text="${variedad.nombre}"></option>
+		</select>
+		
+		<p>Estado: <input type="text" th:field="*{estado}" required>
+		
+		<p><input type="submit" value="Insertar">
+		
+		<p><a th:href="@{/fincas/arbolesfinca?(idfinca=${arbol.finca.idfinca})}">Volver</a></p> 
+</form>
+
+	
+
+</body>
+</html>

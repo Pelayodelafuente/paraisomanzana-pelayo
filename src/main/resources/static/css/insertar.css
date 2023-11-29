@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
+
+body {
+  font-family: 'Courgette';
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #6E9E6F;
+  margin:0px;
+  padding: 0;
+}
+
+
+form {
+  width: 35%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items:center;
+  background-color: #A7864A;
+  border-radius: 20px;
+  border: ridge 10px black;
+  margin-bottom: 30px;
+}
+
+
+input[type="submit"] {
+  background-color: #05541B;
+  color: black;
+  font-weight: bold;
+  font-size: 21px;
+  padding: 5px 0px;
+  border: 5px ridge black;
+  border-radius: 10px;
+  margin-top: 0px;
+  width:200px;
+  height:50px;
+  transition:all 0.3s;
+  cursor: pointer;
+  font-family: 'Courgette';
+}
+
+
+h2{
+	margin-top: 10px;
+	font-size: 30px;
+}
+
+
+input[type="submit"]:hover {
+  background-color: #6E9E6F;
+  color: black;
+  width: 210px;
+  height: 60px;
+  font-size: 25px;
+}
+
+
+p {
+  font-size: 22px;
+}
+
+
+p a{
+ color: #FFC860;
+}
+
+
+input[type="text"],
+input[type="number"],
+input[type="date"]  {
+  width: 200px;
+  height: 12px;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 0px;
+  background-color: bisque;
+}
+
+
+textarea{
+  width: 200px;
+  height: 50px;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 0px;
+  background-color: bisque;
+}
+
+
+select {
+  width: 200px;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}

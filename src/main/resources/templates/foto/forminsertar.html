@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insertar Foto</title>
+<link rel="shortcut icon" href="https://i.imgur.com/OhRWUP3.png">
+<link rel="stylesheet" type="text/css" href="../static/css/insertar.css" th:href="@{/css/insertar.css}" />
+</head>
+
+<style>
+	form{
+		height: 80%;
+	}
+	
+	#aqui{
+		color: blue;
+	}
+</style>
+<body>
+	
+<h2>Insertar Foto</h2>
+
+	<form method="post" th:action="@{/fotos/insertar}" th:object="${foto}">
+		
+		<p>Url: <input type="text" th:field="*{url}" required>
+		
+		<p>Alias: <input type="text" th:field="*{alias}" required>
+		
+		<p>Arbol: <select th:field="*{arbol}" required>
+		<option th:each="arbol: ${arboles}" th:value="${arbol.idarbol}" th:text="${arbol.ubicacion}"></option>
+		</select>
+		
+		<p><input type="submit" value="Insertar">
+		<p> Para subir imágenes <a id="aqui" href="https://imgur.com/" target="_blank">Aquí</a>
+		<p><a th:href="@{/arboles/fotosarbol?(idarbol=${foto.arbol.idarbol})}">Volver</a></p>
+	</form>
+	
+	
+
+</body>
+</html>

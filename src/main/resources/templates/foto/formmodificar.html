@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Modificar foto</title>
+<link rel="shortcut icon" href="https://i.imgur.com/OhRWUP3.png">
+<link rel="stylesheet" type="text/css" href="../static/css/insertar.css" th:href="@{/css/insertar.css}" />
+</head>
+<body>
+	
+<h2>Modificar Foto</h2>
+
+	<form method="post" th:action="@{/fotos/insertar}" th:object="${foto}">
+		
+		<input type="hidden" name="idfoto" th:value="${foto.idfoto}">
+		
+		<p>Url: <input type="text" th:field="*{url}" th:value="foto.url" required>
+		
+		<p>Alias: <input type="text" th:field="*{alias}" th:value="foto.alias" required>
+		
+		<p>Arbol: <select th:field="*{arbol}">
+		<option th:each="arbol: ${arboles}" th:value="${arbol.idarbol}" th:text="${arbol.ubicacion}"></option>
+		</select>
+		
+		<p><input type="submit" value="Modificar" >
+		
+		<p><a th:href="@{/arboles/fotosarbol?(idarbol=${foto.arbol.idarbol})}">Volver</a></p>
+</form>
+
+
+</body>
+</html>
