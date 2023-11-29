@@ -7,7 +7,8 @@ const idfinca = param.get("idfinca");
 
 // Función para obtener los datos de los árboles
 async function obtenerDatosArboles() {
-  const response = await fetch(`http://localhost:8080/fincas/plano/${idfinca}`);
+  //const response = await fetch(`http://localhost:8080/fincas/plano/${idfinca}`);
+  const response = await fetch(`https://paraisomanzana-pelayo-2c561959fa04.herokuapp.com/fincas/plano/${idfinca}`);
   const datos = await response.json();
   mostrarDatosArboles(datos);
 }
