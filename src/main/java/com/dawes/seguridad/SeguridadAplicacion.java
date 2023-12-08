@@ -35,7 +35,7 @@ public class SeguridadAplicacion {
 		
 		//Autorizamos al user normal el acceso a la carpeta user
 		http.authorizeHttpRequests().requestMatchers("/fincas/mostrarfincas",
-		"/variedades/mostrarvariedades","/fincas/arbolesfinca","/fincas/fincaplano","/tratamientos/mostrartratamientos")
+		"/variedades/mostrarvariedades","/fincas/arbolesfinca","/fincas/fincaplano","/fincas/plano","/tratamientos/mostrartratamientos")
 		.hasAnyRole("USER","ADMIN").and().exceptionHandling().accessDeniedPage("/403");
 		
 		
