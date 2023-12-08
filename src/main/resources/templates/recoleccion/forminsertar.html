@@ -17,7 +17,7 @@
 	<h2>Insertar Recolección</h2>
 	
 	<form method="post" th:action="@{/recolecciones/insertar}" th:object="${recoleccion}">
-		<p>Temporada: <input type="number" th:field="*{temporada}" required>
+		<p>Temporada: <input type="text" th:field="*{temporada}" required>
 		
 		<p>Cantidad: <input type="number" th:field="*{cantidad}" required>
 		

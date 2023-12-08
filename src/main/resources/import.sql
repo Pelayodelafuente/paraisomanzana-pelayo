@@ -6,7 +6,6 @@ INSERT INTO `proyecto_pelayo`.`fincas` (`idfinca`, `denominacion`,`direccion`,`r
 
 
 
-
 INSERT INTO `proyecto_pelayo`.`variedades` (`idvariedad`, `nombre`) VALUES ('1', 'Raxao');
 INSERT INTO `proyecto_pelayo`.`variedades` (`idvariedad`, `nombre`) VALUES ('2', 'Regona');
 INSERT INTO `proyecto_pelayo`.`variedades` (`idvariedad`, `nombre`) VALUES ('3', 'Perico');
@@ -17,7 +16,6 @@ INSERT INTO `proyecto_pelayo`.`variedades` (`idvariedad`, `nombre`) VALUES ('7',
 INSERT INTO `proyecto_pelayo`.`variedades` (`idvariedad`, `nombre`) VALUES ('8', 'Colorada de Tineo');
 INSERT INTO `proyecto_pelayo`.`variedades` (`idvariedad`, `nombre`) VALUES ('9', 'Durona de Tresali');
 INSERT INTO `proyecto_pelayo`.`variedades` (`idvariedad`, `nombre`) VALUES ('10', 'Xuanina');
-
 
 
 
@@ -35,12 +33,16 @@ INSERT INTO `proyecto_pelayo`.`arboles` (idarbol, fila, columna, ubicacion, idfi
 
 
 
-
 INSERT INTO `proyecto_pelayo`.`fotos` (`idfoto`,`alias`,`url`,`idarbol`) VALUES ('1','Primera foto','https://i.imgur.com/CJiDuH1.jpg','1');
+
+
 
 
 INSERT INTO `proyecto_pelayo`.`tratamientos` (`idtratamiento`,`denominacion`,`dosisrecomendada`,`tipo`,`idarbol`) VALUES ('1','Primer tratamiento','100','Insecticida','1');
 INSERT INTO `proyecto_pelayo`.`recolecciones` (`idrecoleccion`,`cantidad`,`fecharecoleccion`,`temporada`,`idfinca`,`idvariedad`) VALUES ('1','200','1996/05/06','Primavera','1','1');
+
+
+
 
 INSERT INTO `proyecto_pelayo`.`usuarios` (idusuario, password, username) VALUES ('1','$2a$12$M5iDJ1ROO7XaRz/C5vOMP.pmKucUItgVn88UUqYv9.uGZM.dQVExG','admin');
 INSERT INTO `proyecto_pelayo`.`usuarios` (idusuario, password, username) VALUES ('2','$2a$12$M5iDJ1ROO7XaRz/C5vOMP.pmKucUItgVn88UUqYv9.uGZM.dQVExG','user');
@@ -48,10 +50,8 @@ INSERT INTO `proyecto_pelayo`.`usuarios` (idusuario, password, username) VALUES 
 
 
 
-
 INSERT INTO `proyecto_pelayo`.`roles` (idrol,nombre)VALUES ('1','ROLE_ADMIN');
 INSERT INTO `proyecto_pelayo`.`roles` (idrol,nombre)VALUES ('2','ROLE_USER');
-
 
 
 

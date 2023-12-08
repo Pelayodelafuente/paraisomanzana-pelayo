@@ -35,7 +35,7 @@ public class SeguridadAplicacion {
 		
 		//Autorizamos al user normal el acceso a la carpeta user
 		http.authorizeHttpRequests().requestMatchers("/fincas/mostrarfincas",
-		"/variedades/mostrarvariedades","/fincas/arbolesfinca","/tratamientos/mostrartratamientos")
+		"/variedades/mostrarvariedades","/fincas/arbolesfinca","/fincas/fincaplano","/tratamientos/mostrartratamientos")
 		.hasAnyRole("USER","ADMIN").and().exceptionHandling().accessDeniedPage("/403");
 		
 		
@@ -45,7 +45,7 @@ public class SeguridadAplicacion {
 		
 		
 		//raiz , index, login, 403 no requieren autentificación
-		http.authorizeHttpRequests().requestMatchers("/", "/fincas/mostrarfincas", "/login", "/403").permitAll().anyRequest()
+		http.authorizeHttpRequests().requestMatchers("/fincas/mostrarfincas", "/login", "/403").permitAll().anyRequest()
 		.authenticated();
 
 		
